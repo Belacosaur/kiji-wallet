@@ -16,7 +16,6 @@ export const NETWORKS: Record<string, NetworkConfig> = {
     networkId: "groot.testnet",
     rpcUrl: "http://groot.testnet.gajumaru.io:3013",
     explorerUrl: "https://groot.testnet.gajumaru.io",
-    featuredNftCollections: ["ct_91HPbHQPV4AF2EQc4Vpxw4ANYVzehPnHtJe8NooFbLhFSxPKg"],
     chainType: "groot"
   },
   "groot-mainnet": {

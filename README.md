@@ -8,7 +8,7 @@ Kiji is an independent project. It is **not affiliated with, endorsed by, or an 
 
 - Create or recover a Groot account (`ak_…`)
 - Send and receive **GAJU**
-- Scan AEX-141 collectibles
+- View AEX-141 tokens the account already holds (no minting)
 - Connect websites through `window.gajumaru` (extension) or GRIDS links (desktop)
 - Testnet and mainnet, with an explicit network banner
 - Encrypted vault, idle lock, and per-origin approval for every signature
@@ -89,12 +89,14 @@ Mnemonics are **not BIP-39**. They use hakuzaru’s 4096-word list and a 12-bit 
 ```text
 apps/desktop      Electron wallet
 apps/extension    Chrome MV3 extension
-apps/demo-dapp    minimal window.gajumaru / GRIDS sample
-packages/         protocol SDK (crypto, encoding, RPC, transactions)
-services/api      optional local GRIDS callback helper
-fixtures/         generated test vectors only
+apps/demo-dapp    sample page to test connect / sign / send
+packages/         shared Groot SDK used by both apps
+services/api      optional local GRIDS helper for desktop connect
+fixtures/         test vectors only
 docs/             protocol and security notes
 ```
+
+There is no minting contract in this repo. `packages/assets` only lists tokens a wallet already owns.
 
 ## Security
 

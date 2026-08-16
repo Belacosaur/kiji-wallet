@@ -1,7 +1,0 @@
-{
-  "name": "@gajumaru/explorer-lite",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "description": "Lite explorer is deferred; use Groot explorer until the indexer exists."
-}
