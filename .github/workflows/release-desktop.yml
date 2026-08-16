@@ -1,0 +1,38 @@
+name: release-desktop-windows
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install
+      - run: npm run dist:win
+        env:
+          CSC_LINK: ${{ secrets.CSC_LINK }}
+          CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+          KIJI_DOWNLOAD_BASE: ${{ vars.KIJI_DOWNLOAD_BASE }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kiji-wallet-windows
+          path: |
+            apps/desktop/release/*.exe
+            apps/desktop/release/latest.json
+      - if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            apps/desktop/release/*.exe
+            apps/desktop/release/latest.json

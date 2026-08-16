@@ -1,0 +1,12 @@
+{
+  "name": "@gajumaru/transactions",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@gajumaru/crypto": "0.1.0",
+    "@gajumaru/encoding": "0.1.0"
+  }
+}

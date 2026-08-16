@@ -1,0 +1,14 @@
+{
+  "name": "@gajumaru/test-vectors",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@gajumaru/core": "0.1.0",
+    "@gajumaru/crypto": "0.1.0",
+    "@gajumaru/encoding": "0.1.0",
+    "@gajumaru/transactions": "0.1.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@gajumaru/extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node build.mjs",
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "@gajumaru/assets": "0.1.0",
+    "@gajumaru/contracts": "0.1.0",
+    "@gajumaru/core": "0.1.0",
+    "@gajumaru/crypto": "0.1.0",
+    "@gajumaru/encoding": "0.1.0",
+    "@gajumaru/provider": "0.1.0",
+    "@gajumaru/rpc": "0.1.0",
+    "@gajumaru/transactions": "0.1.0",
+    "buffer": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.4",
+    "esbuild": "^0.25.9",
+    "typescript": "^5.9.2"
+  }
+}

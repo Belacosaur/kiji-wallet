@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kiji Demo dApp</title>
+    <style>
+      :root { color: #f3ead6; background: #102318; font-family: Georgia, serif; }
+      body { max-width: 720px; margin: 48px auto; padding: 0 20px; }
+      button { margin-right: 8px; padding: 10px 14px; border-radius: 999px; border: 0; background: #e0b567; cursor: pointer; }
+      pre { background: #0b1711; padding: 16px; border-radius: 12px; overflow: auto; }
+      input { width: 100%; margin: 8px 0 16px; padding: 10px; border-radius: 10px; border: 1px solid #355445; background: #0b1711; color: inherit; }
+    </style>
+  </head>
+  <body>
+    <p style="letter-spacing:.18em; text-transform:uppercase; color:#e0b567; font-family:sans-serif; font-size:12px;">Kiji</p>
+    <h1>Connect, approve, send.</h1>
+    <p>Use the extension for <code>window.gajumaru</code>, or open the desktop wallet with a GRIDS link.</p>
+    <button id="connect">Connect extension</button>
+    <button id="sign">Sign with extension</button>
+    <button id="grids-sign">Sign with desktop (GRIDS)</button>
+    <h3>Send GAJU</h3>
+    <input id="to" placeholder="ak_..." />
+    <input id="amount" placeholder="1" />
+    <button id="send">Request payment</button>
+    <pre id="log">waiting...</pre>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

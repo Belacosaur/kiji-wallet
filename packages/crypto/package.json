@@ -1,0 +1,12 @@
+{
+  "name": "@gajumaru/crypto",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.8.0",
+    "tweetnacl": "^1.0.3"
+  }
+}

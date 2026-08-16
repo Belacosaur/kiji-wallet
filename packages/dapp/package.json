@@ -1,0 +1,13 @@
+{
+  "name": "@gajumaru/dapp",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@gajumaru/grids": "0.1.0",
+    "@gajumaru/provider": "0.1.0",
+    "@gajumaru/encoding": "0.1.0"
+  }
+}

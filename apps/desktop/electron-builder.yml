@@ -1,0 +1,43 @@
+appId: io.kiji.wallet
+productName: Kiji Wallet
+copyright: Copyright © 2026 Kiji contributors
+artifactName: Kiji-Wallet-Setup-${version}.${ext}
+asar: true
+directories:
+  output: release
+files:
+  - dist/**/*
+extraMetadata:
+  name: kiji-wallet
+  main: dist/main.cjs
+  type: commonjs
+electronVersion: 37.2.6
+forceCodeSigning: false
+win:
+  icon: src/renderer/icon.ico
+  target:
+    - target: nsis
+      arch:
+        - x64
+  signAndEditExecutable: true
+  verifyUpdateCodeSignature: false
+  signtoolOptions:
+    publisherName: Kiji contributors
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: src/renderer/icon.ico
+  uninstallerIcon: src/renderer/icon.ico
+  installerHeaderIcon: src/renderer/icon.ico
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Kiji Wallet
+  uninstallDisplayName: Kiji Wallet
+  deleteAppDataOnUninstall: false
+  displayLanguageSelector: false
+protocols:
+  - name: Kiji GRIDS
+    schemes:
+      - grids
+      - grid

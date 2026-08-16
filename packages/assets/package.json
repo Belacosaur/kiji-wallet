@@ -1,0 +1,12 @@
+{
+  "name": "@gajumaru/assets",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@gajumaru/contracts": "0.1.0",
+    "@gajumaru/rpc": "0.1.0"
+  }
+}

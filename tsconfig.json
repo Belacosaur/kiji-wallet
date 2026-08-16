@@ -1,0 +1,16 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/crypto" },
+    { "path": "packages/encoding" },
+    { "path": "packages/transactions" },
+    { "path": "packages/rpc" },
+    { "path": "packages/core" },
+    { "path": "packages/contracts" },
+    { "path": "packages/assets" },
+    { "path": "packages/provider" },
+    { "path": "packages/grids" },
+    { "path": "packages/dapp" },
+    { "path": "packages/test-vectors" }
+  ]
+}

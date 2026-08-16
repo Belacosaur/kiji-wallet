@@ -1,0 +1,34 @@
+{
+  "name": "@gajumaru/desktop",
+  "productName": "Kiji Wallet",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Kiji contributors",
+  "license": "MIT",
+  "description": "Non-custodial Kiji wallet for Groot",
+  "type": "module",
+  "main": "dist/main.cjs",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && electron .",
+    "start": "electron .",
+    "dist:win": "node build.mjs && electron-builder --win nsis --config electron-builder.yml && node scripts/write-latest.mjs"
+  },
+  "dependencies": {
+    "@gajumaru/core": "0.1.0",
+    "@gajumaru/crypto": "0.1.0",
+    "@gajumaru/encoding": "0.1.0",
+    "@gajumaru/provider": "0.1.0",
+    "@gajumaru/grids": "0.1.0",
+    "@gajumaru/rpc": "0.1.0",
+    "@gajumaru/transactions": "0.1.0",
+    "@gajumaru/assets": "0.1.0",
+    "@gajumaru/contracts": "0.1.0"
+  },
+  "devDependencies": {
+    "electron": "^37.2.6",
+    "esbuild": "^0.25.9",
+    "electron-builder": "^26.0.12",
+    "typescript": "^5.9.2"
+  }
+}

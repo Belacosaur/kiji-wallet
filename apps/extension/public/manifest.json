@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Kiji Wallet",
+  "version": "0.1.0",
+  "description": "Non-custodial Kiji wallet for Groot.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Kiji Wallet"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["inpage.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "permissions": ["storage"],
+  "host_permissions": [
+    "http://groot.testnet.gajumaru.io:3013/*",
+    "https://groot.testnet.gajumaru.io/*",
+    "http://groot.mainnet.gajumaru.io:3013/*",
+    "https://groot.mainnet.gajumaru.io/*",
+    "https://ipfs.io/*",
+    "https://arweave.net/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' data: https:;"
+  }
+}

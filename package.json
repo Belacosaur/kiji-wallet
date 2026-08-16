@@ -1,0 +1,39 @@
+{
+  "name": "kiji-wallet",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Non-custodial Kiji wallets for Groot — desktop and Chrome extension",
+  "author": "Kiji contributors",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "services/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -b --pretty",
+    "lint": "tsc -b --pretty",
+    "fixtures": "tsx scripts/compatibility/generate-fixtures.ts",
+    "send:demo": "tsx scripts/compatibility/send-gaju.ts",
+    "dev:dapp": "npm run dev -w @gajumaru/demo-dapp",
+    "dev:extension": "npm run dev -w @gajumaru/extension",
+    "build:extension": "npm run build -w @gajumaru/extension",
+    "dev:desktop": "npm run dev -w @gajumaru/desktop",
+    "build:desktop": "npm run build -w @gajumaru/desktop",
+    "dist:win": "npm run dist:win -w @gajumaru/desktop",
+    "dev:api": "npm run dev -w @gajumaru/api"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

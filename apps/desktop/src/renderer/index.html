@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data: https:;"
+    />
+    <title>Kiji Wallet</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-mode="lock">
+    <header id="chrome" class="chrome hidden"></header>
+    <div id="banner" class="banner hidden">You are currently in Testnet Mode.</div>
+    <main id="app"></main>
+    <nav id="dock" class="dock hidden">
+      <button type="button" data-tab="home" class="dock-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"/></svg>
+        <span>Home</span>
+      </button>
+      <button type="button" data-tab="nfts" class="dock-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        <span>Collectibles</span>
+      </button>
+      <button type="button" data-tab="activity" class="dock-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v5l3 2"/></svg>
+        <span>Apps</span>
+      </button>
+      <button type="button" data-tab="settings" class="dock-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 4v2M12 18v2M4.9 6.5l1.5 1.5M17.6 16.1l1.5 1.5M4 12h2M18 12h2M4.9 17.5l1.5-1.5M17.6 7.9l1.5-1.5"/></svg>
+        <span>Settings</span>
+      </button>
+    </nav>
+    <div id="overlay" class="hidden"></div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
